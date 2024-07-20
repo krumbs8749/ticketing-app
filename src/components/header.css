@@ -1,0 +1,43 @@
+.header {
+    background-color: #4A90E2;
+    padding: 1em 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 2em;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav a:hover::after, .nav a.active::after {
+    width: 100%;
+}
+
+.nav a:hover, .nav a.active {
+    color: #FFD700;
+}
